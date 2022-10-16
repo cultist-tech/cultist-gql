@@ -1,4 +1,6 @@
 import { CultistNftSdk } from "./nft";
+import { CultistMarketSaleSdk } from "./market-sale";
+import { CultistMarketRentSdk } from "./market-rent";
 
 const statisticGql = `{
   statistic(id: "_") {
@@ -24,10 +26,14 @@ export type ICultistSdkFetch = (query: string, variables?: object) => Promise<an
 export class CultistSdk {
     protected fetch: ICultistSdkFetch;
     public nft: CultistNftSdk;
+    public marketSale: CultistMarketSaleSdk;
+    public marketRent: CultistMarketRentSdk;
 
     constructor(fetch: ICultistSdkFetch) {
         this.fetch = fetch;
         this.nft = new CultistNftSdk(fetch);
+        this.marketSale = new CultistMarketSaleSdk(fetch);
+        this.marketRent = new CultistMarketRentSdk(fetch);
     }
 
     public async statistic() {
