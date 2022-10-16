@@ -4,7 +4,7 @@ export function buildQueryWhere(obj: { [key: string]: any }) {
     for (const key in obj) {
         if (typeof obj[key] !== "undefined") {
             if (typeof obj[key] === "object" && obj[key] !== null) {
-              conditions.push(`${key}: ${buildQueryWhere(obj[key])}`);
+                conditions.push(`${key}: ${buildQueryWhere(obj[key])}`);
             } else if (typeof obj[key] === "string") {
                 conditions.push(`${key}: "${obj[key]}"`);
             } else {
