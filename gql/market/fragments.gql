@@ -1,0 +1,18 @@
+fragment MarketSale on MarketSale {
+  id
+  ownerId
+  contractId
+  tokenId
+  createdAt
+  token { ...TokenPart }
+  conditions { price ftTokenId }
+}
+
+fragment MarketSalePart on MarketSale {
+  id
+  ownerId
+  contractId
+  tokenId
+  createdAt
+  conditions { price ftTokenId }
+}

@@ -1,0 +1,5 @@
+query marketRents ($limit: Int!, $offset: Int!, $where: MarketRent_filter!) {
+  marketRents(first: $limit, skip: $offset, where: $where) {
+    ...MarketRent
+  }
+}

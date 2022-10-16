@@ -1,0 +1,46 @@
+fragment Token on Token {
+  id
+  tokenId
+  ownerId
+
+  bindToOwner
+  rarity
+
+  tokenMetadata{
+    title
+    media
+    description
+  }
+
+  royalty {
+    accountId
+    value
+  }
+
+  sale {
+      ...MarketSalePart
+  }
+  rent {
+      ...MarketRentPart
+  }
+}
+
+fragment TokenPart on Token {
+  id
+  tokenId
+  ownerId
+
+  bindToOwner
+  rarity
+
+  tokenMetadata{
+    title
+    media
+    description
+  }
+
+  royalty {
+    accountId
+    value
+  }
+}

@@ -1,0 +1,45 @@
+schema: https://api.thegraph.com/subgraphs/id/QmaP6yn6v1G2W6XiPA8c2wrrss1wyaHU8kg5oZq9PZuyS9
+overwrite: true
+
+# Format files
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+generates:
+  # Get schemas from server
+  example/schemas.ts:
+    documents: './gql/**/*.gql'
+    plugins:
+      - typescript
+  # Create operations based on queries
+  example/operations.ts:
+    documents: './gql/**/*.gql'
+    preset: import-types
+    presetConfig:
+      typesPath: ./schemas
+    plugins:
+      - typescript-operations
+
+  # 1. Export GraphQL documents
+  # 2. React interface
+  example/react-hooks.ts:
+    documents: './gql/**/*.gql'
+    preset: import-types
+    presetConfig:
+      typesPath: ./operations
+    plugins:
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withHOC: false
+      withComponent: false
+
+  example/server-sdk.ts:
+    documents: './gql/**/*.gql'
+    preset: import-types
+    presetConfig:
+      typesPath: ./schemas
+    plugins:
+      - typescript-operations
+      - typescript-generic-sdk
+

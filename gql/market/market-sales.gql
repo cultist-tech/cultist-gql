@@ -1,0 +1,5 @@
+query marketSales ($limit: Int!, $offset: Int!, $where: MarketSale_filter!) {
+  marketSales(first: $limit, skip: $offset, where: $where) {
+    ...MarketSale
+  }
+}

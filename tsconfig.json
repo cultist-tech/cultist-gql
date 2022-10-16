@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["esnext", "es5", "ES2015", "es6", "dom"],
+    "moduleResolution": "node",
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "declaration": false,
+    "downlevelIteration": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "baseUrl": ".",
+    "outDir": "./dist"
+  },
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.typings.ts", "public"]
+}

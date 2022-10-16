@@ -1,0 +1,18 @@
+fragment MarketRentPart on MarketRent {
+  id
+  ownerId
+  contractId
+  tokenId
+  createdAt
+  conditions { price ftTokenId }
+}
+
+fragment MarketRent on MarketRent {
+  id
+  ownerId
+  contractId
+  tokenId
+  createdAt
+  token { ...TokenPart }
+  conditions { price ftTokenId }
+}

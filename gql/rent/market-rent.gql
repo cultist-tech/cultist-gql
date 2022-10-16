@@ -1,0 +1,5 @@
+query marketRent ($id: ID!) {
+  marketRent(id: $id) {
+    ...MarketRent
+  }
+}

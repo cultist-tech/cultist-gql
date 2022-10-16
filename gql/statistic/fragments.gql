@@ -1,0 +1,16 @@
+fragment Statistic on Statistic {
+  id
+  nftTransferTotal
+  nftPayTotal
+  nftBurnTotal
+  nftTotal
+  marketSaleTotal
+  marketSaleNearSum
+  # marketSaleNearFloor
+  marketSaleNearTotal
+  marketRentTotal
+  marketRentNearSum
+  # marketRentNearFloor
+  marketRentNearTotal
+  accountTotal
+}
