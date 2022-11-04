@@ -6,11 +6,9 @@ fragment Statistic on Statistic {
   nftTotal
   marketSaleTotal
   marketSaleNearSum
-  # marketSaleNearFloor
   marketSaleNearTotal
   marketRentTotal
   marketRentNearSum
-  # marketRentNearFloor
   marketRentNearTotal
   accountTotal
 }

@@ -1,0 +1,100 @@
+fragment ReferralProgram on ReferralProgram {
+    id
+    contractId
+    influencerId
+    programId
+    code
+    royalty_percent
+
+    title
+    description
+    url
+    media
+
+    referralsCount
+    activeReferralsCount
+    payoutCount
+    payoutNear
+
+    createdAt
+}
+
+fragment ReferralContract on ReferralContract {
+    id
+    contractId
+
+    referralsCount
+    activeReferralsCount
+    payoutCount
+    payoutNear
+
+    programsCount
+    influencersCount
+}
+
+fragment ReferralInfluencer on ReferralInfluencer {
+    id
+    influencerId
+
+    referralsCount
+    activeReferralsCount
+    payoutCount
+    payoutNear
+
+    programsCount
+    contractsCount
+}
+
+fragment Referral on Referral {
+    id
+    contractId
+    influencerId
+    programId
+    accountId
+    # contract
+    # influencer
+    # program { ... ReferralProgram }
+    # account: Account!
+}
+
+fragment ReferralContractInfluencer on ReferralContractInfluencer {
+    id
+    contractId
+    influencerId
+
+    programsCount
+
+    referralsCount
+    activeReferralsCount
+    payoutCount
+    payoutNear
+
+    createdAt
+}
+
+fragment ReferralInfluencerContract on ReferralInfluencerContract {
+    id
+    contractId
+    influencerId
+
+    programsCount
+
+    referralsCount
+    activeReferralsCount
+    payoutCount
+    payoutNear
+
+    createdAt
+}
+
+fragment ReferralContractVolume on ReferralContractVolume {
+    ftTokenId
+    amount
+    id
+}
+
+fragment ReferralInfluencerVolume on ReferralInfluencerVolume {
+    ftTokenId
+    amount
+    id
+}

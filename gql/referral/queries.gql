@@ -1,0 +1,69 @@
+query referralPrograms($limit: Int!, $offset: Int!, $where: ReferralProgram_filter! $orderBy: ReferralProgram_orderBy!, $orderDirection: OrderDirection!) {
+  referralPrograms(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralProgram
+  }
+}
+
+query referralContractInfluencers($limit: Int!, $offset: Int!, $where: ReferralContractInfluencer_filter! $orderBy: ReferralContractInfluencer_orderBy!, $orderDirection: OrderDirection!) {
+  referralContractInfluencers(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralContractInfluencer
+  }
+}
+query referralContractInfluencer($id: ID!) {
+  referralContractInfluencer(id: $id) {
+    ...ReferralContractInfluencer
+  }
+}
+
+query referralInfluencerContracts($limit: Int!, $offset: Int!, $where: ReferralInfluencerContract_filter! $orderBy: ReferralInfluencerContract_orderBy!, $orderDirection: OrderDirection!) {
+  referralInfluencerContracts(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralInfluencerContract
+  }
+}
+query referralInfluencerContract($id: ID!) {
+  referralInfluencerContract(id: $id) {
+    ...ReferralInfluencerContract
+  }
+}
+
+query referralContracts($limit: Int!, $offset: Int!, $where: ReferralContract_filter! $orderBy: ReferralContract_orderBy!, $orderDirection: OrderDirection!) {
+  referralContracts(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralContract
+  }
+}
+
+query referralInfluencers($limit: Int!, $offset: Int!, $where: ReferralInfluencer_filter! $orderBy: ReferralInfluencer_orderBy!, $orderDirection: OrderDirection!) {
+  referralInfluencers(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralInfluencer
+  }
+}
+
+query referralContract($id: ID!) {
+  referralContract(id: $id) {
+    ...ReferralContract
+  }
+}
+
+query referralInfluencer($id: ID!) {
+  referralInfluencer(id: $id) {
+    ...ReferralInfluencer
+  }
+}
+
+query referral($id: ID!) {
+  referral(id: $id) {
+    ...Referral
+  }
+}
+
+query referralContractVolumes($limit: Int!, $offset: Int!, $where: ReferralContractVolume_filter! $orderBy: ReferralContractVolume_orderBy!, $orderDirection: OrderDirection!) {
+  referralContractVolumes(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralContractVolume
+  }
+}
+
+query referralInfluencerVolumes($limit: Int!, $offset: Int!, $where: ReferralInfluencerVolume_filter! $orderBy: ReferralInfluencerVolume_orderBy!, $orderDirection: OrderDirection!) {
+  referralInfluencerVolumes(first: $limit, skip: $offset, where: $where, orderBy: $orderBy, orderDirection: $orderDirection) {
+    ...ReferralInfluencerVolume
+  }
+}
